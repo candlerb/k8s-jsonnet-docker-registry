@@ -33,7 +33,7 @@
     containersObj:: error 'Missing containersObj',
     volumes: k8s.namedList(self.volumesObj),
     volumesObj:: {},
-    hostAliases: k8s.namedList(self.hostAliasesObj, 'ip', 'hostnames'),
+    hostAliases: k8s.namedList(self.hostAliasesObj, null, error 'Object with ip and hostnames is required'),
     hostAliasesObj:: {},
   },
 

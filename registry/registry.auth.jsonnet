@@ -29,4 +29,4 @@ local patch = {
 local registry = import 'registry-resources.libsonnet';
 local k8s = import 'k8s.libsonnet';
 
-k8s.replaceNamespace(registry(conf) + patch, conf.namespace)
+k8s.replaceNamespace(registry(conf) + patch, namespace=conf.namespace)
