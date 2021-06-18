@@ -6,7 +6,8 @@
   namedList(tab,
             kfield='name',
             vfield='value'):: [
-    (if std.isObject(tab[k]) then tab[k] else { [vfield]: tab[k] }) +
+    local v = tab[k];
+    (if std.isObject(v) then v else { [vfield]: v }) +
     { [kfield]: k }
     for k in std.objectFields(tab)
   ],
