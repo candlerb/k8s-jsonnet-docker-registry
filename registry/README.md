@@ -30,7 +30,7 @@ NAME                      TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AG
 docker-registry-service   ClusterIP   10.43.101.144  <none>        5000/TCP   20d
 ```
 
-This can be used directly on port 5000. although only from the local cluster.
+This can be used directly on port 5000, although only from the local cluster.
 The address is cluster-internal and will change if you delete and redeploy
 the registry.
 
